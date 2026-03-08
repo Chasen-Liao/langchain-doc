@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 license = {text = "MIT"}
 authors = [
-    {name = "Chasen", email = ""},
+    {name = "Chasen", email = "2558891266@qq.com"},
 ]
 keywords = ["langchain", "llm", "agents", "langgraph", "rag", "ai"]
 classifiers = [
