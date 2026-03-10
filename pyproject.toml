@@ -24,22 +24,19 @@ dependencies = [
     "langchain-core>=0.3.0",     # 核心接口和基础类
     "langchain-community>=0.3.0", # 社区集成组件
     "langgraph>=0.2.0,<2.0.0",   # LangGraph 代理运行时
-
     # 官方合作伙伴包
     "langchain-openai>=0.3.0",   # OpenAI 集成
-
     # 文本处理和向量存储
     "langchain-text-splitters>=0.3.0", # 文本分割工具
     "chromadb>=0.5.0",           # ChromaDB 向量数据库
     "tiktoken>=0.7.0",           # Token 计数
-
     # 工具和实用程序
     "python-dotenv>=1.0.0",      # 环境变量管理
     "pydantic>=2.0.0",           # 数据验证 (LangChain 依赖)
     "tenacity>=8.0.0",           # 重试机制
-
     # 可选的 API 提供商 SDK
     "openai>=1.0.0",             # OpenAI SDK
+    "langchain-ollama>=1.0.1",
 ]
 
 [project.optional-dependencies]
