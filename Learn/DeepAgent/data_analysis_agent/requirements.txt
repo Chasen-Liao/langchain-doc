@@ -1,0 +1,12 @@
+# 数据分析Agent依赖项
+# 注意：推荐使用uv进行依赖管理，参见README.md
+
+langchain>=1.2,<2.0
+langchain-core>=0.3.0
+langchain-openai>=0.3.0
+deepagents>=0.3.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+python-dotenv>=1.0.0
+ujson>=5.0.0

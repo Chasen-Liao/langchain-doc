@@ -1,0 +1,54 @@
+[project]
+name = "data-analysis-agent"
+version = "0.1.0"
+description = "基于硅基流动API的数据分析Agent，使用Deep Agents框架构建"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "Chasen", email = "2558891266@qq.com"},
+]
+keywords = ["langchain", "deepagents", "siliconflow", "data-analysis", "agents"]
+
+dependencies = [
+    # LangChain 核心包 (根据项目要求使用1.2版本)
+    "langchain>=1.2,<2.0",
+    "langchain-core>=0.3.0",
+    "langchain-openai>=0.3.0",
+
+    # Deep Agents 框架
+    "deepagents>=0.3.0",
+
+    # 数据分析依赖
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+
+    # 环境变量管理
+    "python-dotenv>=1.0.0",
+
+    # JSON处理
+    "ujson>=5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "black>=24.0.0",
+    "ruff>=0.4.0",
+    "jupyter>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+select = ["E", "W", "F", "I", "B", "UP"]
