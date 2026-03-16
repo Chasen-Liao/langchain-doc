@@ -37,6 +37,7 @@ dependencies = [
     # 可选的 API 提供商 SDK
     "openai>=1.0.0",             # OpenAI SDK
     "langchain-ollama>=1.0.1",
+    "langgraph-checkpoint-postgres>=3.0.4",
 ]
 
 [project.optional-dependencies]
@@ -71,6 +72,11 @@ test = [
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+# 这是一个学习项目，不需要打包多个目录
+# 只打包 langchain_doc 主包（如果有的话）
+exclude = ["Learn*", "Middleware*"]
 
 [tool.black]
 line-length = 88
