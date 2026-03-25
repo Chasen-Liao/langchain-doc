@@ -1,0 +1,12 @@
+[project]
+name = "langchain-learn"
+version = "0.1.0"
+description = "LangChain v1.2 官方文档学习仓库"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.0",
+    "langchain-openai",
+    "langgraph",
+    "langchain-core",
+    "ipykernel"
+]
