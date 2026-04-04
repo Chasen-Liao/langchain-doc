@@ -65,8 +65,8 @@ jupyter lab
 
 ## 🛠️ 技术栈
 
-- **LangChain**: v1.2+
-- **LangGraph**: 状态管理和编排
+- **LangChain**: v1.2+ 快速构建Agent应用的主流开发框架
+- **LangGraph**: 复杂流程管理和编排的Agent应用开发框架
 - **Jupyter**: 交互式学习环境
 - **Python**: 3.10+
 
