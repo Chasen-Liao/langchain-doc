@@ -24,6 +24,8 @@ async def main():
     llm = get_model()
 
     print("2. 连接 MCP 服务器...", flush=True)
+    #? MultiServerMCPClient 支持 stdio 和 HTTP 两种通信方式
+    # 然后使用stdio就可以通过npx或者uvx这种命令去启动外置的一些MCP服务器
     client = MultiServerMCPClient(
         connections={
             "math": {
@@ -51,13 +53,13 @@ async def main():
     math_response = await agent.ainvoke(
         {"messages": [{"role": "user", "content": "what's (3 + 5) x 12?"}]}
     )
-    print(f"   math 响应: {math_response}", flush=True)
+    print(f"   math 响应: {math_response["messages"][-1].content}", flush=True)
 
     print("6. 调用 weather 工具...", flush=True)
     weather_response = await agent.ainvoke(
         {"messages": [{"role": "user", "content": "what is the weather in nyc?"}]}
     )
-    print(f"   weather 响应: {weather_response}", flush=True)
+    print(f"   weather 响应: {weather_response["messages"][-1].content}", flush=True)
 
 
 if __name__ == "__main__":
